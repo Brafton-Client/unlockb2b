@@ -23,10 +23,10 @@ services:
     ports:
       - "8000:80"
     environment:
-      WORDPRESS_DB_HOST: db:3306
-      WORDPRESS_DB_USER: wordpress
-      WORDPRESS_DB_PASSWORD: password
-      WORDPRESS_DB_NAME: wordpress
+      WORDPRESS_DB_HOST: designs-dev-db.credhjaqdcgx.us-east-1.rds.amazonaws.com
+      WORDPRESS_DB_USER: db_user
+      WORDPRESS_DB_PASSWORD: db_password
+      WORDPRESS_DB_NAME: unlockb2b
       WORDPRESS_CONFIG_EXTRA: 
 volumes:
   db_data:
