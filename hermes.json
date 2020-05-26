@@ -1,0 +1,31 @@
+{
+    "name": "unlockb2b",
+    "account": "braftonclientsites",
+    "repo": "unlockb2b",
+    "global": {
+        "targetroot": "/var/www/html/design/brafton/${NAME}",
+        "group": "www",
+        "owner": "apache",
+        "url": "http://design.brafton.com/${NAME}",
+        "title": "Business Cashflow Funding Platform",
+        "theme": "unlockb2b",
+        "parent": "braftonium",
+        "deploy_parent": "y",
+        "deployment_branch": "develop",
+        "deploy_plugins": "y",
+        "update_plugins": "n",
+        "package_site": "n",
+        "soft_launch_url": "",
+        "deploy_new_submodules": "n"
+    },
+    "deploy": [
+        {
+            "tag": "dev",
+            "branch": "${GLOBAL_DEPLOYMENT_BRANCH}",
+            "beforeinstall": "scripts/server/before.sh",
+            "afterinstall": "scripts/server/after.sh",
+            "source": "wp/wp-content/themes/${GLOBAL_THEME}",
+            "target": "${GLOBAL_TARGETROOT}/wp-content/themes/${GLOBAL_THEME}"
+        }
+    ]
+}
