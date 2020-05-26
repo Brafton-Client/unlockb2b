@@ -1,0 +1,41 @@
+header{
+    background-color:transparent !important;
+    #inner-header{
+        background-color:transparent !important;
+        #logo{
+            
+            svg{
+                width:100%;
+                height:auto;
+            }
+        }
+        .wrap{
+            @media only screen and (min-width:768px){
+                grid-template-rows:50px auto auto;
+                #logo{
+                    grid-row:2;
+                }
+                .next{
+                    display:flex;
+                    .nav{
+                        flex:0 1 100%;
+                        align-items: center;
+                        li{
+                            font-weight: 900;
+                            font-size:1.35em;
+                        }
+                    }
+                }
+            }
+        }
+        #menu-main{
+            @media only screen and (min-width:1030px){
+                li{
+                    margin-left:10%;
+
+                }
+            }
+        }
+
+    }
+}

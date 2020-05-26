@@ -1,0 +1,15 @@
+&.banner{
+    position: relative;
+    .hexagon-background-image{
+        position: absolute;
+        top:-50%;
+        right:10px;
+        z-index:-1;
+    }
+    .black{
+        background-color:transparent;
+        @media only screen and (min-width:768px){
+            min-height:750px;
+        }
+    }
+}
