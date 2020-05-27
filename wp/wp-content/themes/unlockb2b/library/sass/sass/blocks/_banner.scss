@@ -2,14 +2,105 @@
     position: relative;
     .hexagon-background-image{
         position: absolute;
-        top:-50%;
-        right:10px;
         z-index:-1;
+        top:-150px;
+        right:-25%;
+        img{
+            width:100%;
+            height:auto;
+            position: relative;
+            top:-150px;
+            right:-25%;
+        }
+        @media only screen and (min-width:1030px){
+            top:-55%;
+            right:75px;
+            max-width:700px;
+            img{
+                position: initial;
+            }
+        }
+        
     }
     .black{
         background-color:transparent;
         @media only screen and (min-width:768px){
             min-height:750px;
+        }
+        .wrap{
+            > *{
+                @media only screen and (min-width:1030px){
+                    width:50%;
+                    text-align: left;
+                }
+            }
+            h1{
+                color:$text;
+                text-transform: initial;
+                line-height: 1.1em;
+                @media only screen and (min-width:780px){
+                    font-size:4.9375rem;
+                    font-weight: 700;
+                    margin-top:1em;
+                }
+            }
+            .btn{
+                background-image: linear-gradient(244deg, $lightGreen, $green);
+                color:$white;
+                border-radius: 14px;
+                font-size: 1.35em;
+                margin-top:1em;
+                display:inline-block;
+                padding:.5em 1.25em;
+                @media only screen and (min-width:780px){
+                    padding: 1em 4em;
+                }
+            }
+        }
+    }
+    .polygon{
+        display:none;
+        position: absolute;
+        bottom:-50px;
+        right:5%;
+        @media only screen and (min-width:1366px){
+            bottom:-100px;
+        }
+        img{
+            max-height:225px;
+            width:auto;
+            @media only screen and (min-width:1030px){
+                max-height:250px;
+            }
+            @media only screen and (min-width:1366px){
+                max-height:350px;
+            }
+            @media only screen and (min-width:1600px){
+                max-height:450px;
+            }
+
+        }
+
+    }
+    &.poly{
+
+        &:after{
+            position: absolute;
+            bottom: -2px;
+            right: 0;
+            z-index: -1;
+            width: 100%;
+            text-align: right;
+            background:url('../images/polygon.png') center/cover;
+            max-height:796px;
+            height:100%;
+            display:block;
+            content:"";
+        }
+    }
+    @media only screen and (min-width:980px){
+        .polygon{
+            display:block;
         }
     }
 }

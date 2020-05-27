@@ -1,3 +1,24 @@
+/* line 1, ../sass/sass/components/_typography.scss */
+body {
+  font-size: 20px;
+}
+
+/* line 4, ../sass/sass/components/_typography.scss */
+h2 {
+  font-size: 4rem;
+  font-weight: 900;
+}
+
+/* line 8, ../sass/sass/components/_typography.scss */
+p {
+  font-size: 20px;
+}
+
+/* line 1, ../sass/sass/modules/_body.scss */
+#container {
+  overflow: hidden;
+}
+
 /* line 1, ../sass/sass/modules/_header.scss */
 header {
   background-color: transparent !important;
@@ -38,7 +59,46 @@ header #inner-header #logo svg {
 @media only screen and (min-width: 1030px) {
   /* line 33, ../sass/sass/modules/_header.scss */
   header #inner-header #menu-main li {
-    margin-left: 10%;
+    margin-left: 6%;
+  }
+}
+
+/* line 2, ../sass/sass/modules/_footer.scss */
+footer.footer {
+  padding-top: 0;
+}
+/* line 4, ../sass/sass/modules/_footer.scss */
+footer.footer .copyright {
+  background: transparent;
+}
+@media only screen and (min-width: 768px) {
+  /* line 8, ../sass/sass/modules/_footer.scss */
+  footer.footer #inner-footer section {
+    flex: 01 25%;
+  }
+}
+/* line 13, ../sass/sass/modules/_footer.scss */
+footer.footer #inner-footer section h2.h3 {
+  font-size: 1em;
+  font-weight: 900;
+}
+/* line 18, ../sass/sass/modules/_footer.scss */
+footer.footer #inner-footer section:first-of-type {
+  margin-right: 10%;
+  flex: 0 1 30%;
+}
+/* line 25, ../sass/sass/modules/_footer.scss */
+footer:before {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 8px;
+  background-image: linear-gradient(244deg, #A8D52A, #24793b);
+}
+@media only screen and (min-width: 481px) {
+  /* line 33, ../sass/sass/modules/_footer.scss */
+  footer a.logo img {
+    max-width: 400px !important;
   }
 }
 
@@ -49,17 +109,141 @@ section.banner {
 /* line 3, ../sass/sass/blocks/_banner.scss */
 section.banner .hexagon-background-image {
   position: absolute;
-  top: -50%;
-  right: 10px;
   z-index: -1;
+  top: -150px;
+  right: -25%;
 }
-/* line 9, ../sass/sass/blocks/_banner.scss */
+/* line 8, ../sass/sass/blocks/_banner.scss */
+section.banner .hexagon-background-image img {
+  width: 100%;
+  height: auto;
+  position: relative;
+  top: -150px;
+  right: -25%;
+}
+@media only screen and (min-width: 1030px) {
+  /* line 3, ../sass/sass/blocks/_banner.scss */
+  section.banner .hexagon-background-image {
+    top: -55%;
+    right: 75px;
+    max-width: 700px;
+  }
+  /* line 19, ../sass/sass/blocks/_banner.scss */
+  section.banner .hexagon-background-image img {
+    position: initial;
+  }
+}
+/* line 25, ../sass/sass/blocks/_banner.scss */
 section.banner .black {
   background-color: transparent;
 }
 @media only screen and (min-width: 768px) {
-  /* line 9, ../sass/sass/blocks/_banner.scss */
+  /* line 25, ../sass/sass/blocks/_banner.scss */
   section.banner .black {
     min-height: 750px;
   }
+}
+@media only screen and (min-width: 1030px) {
+  /* line 31, ../sass/sass/blocks/_banner.scss */
+  section.banner .black .wrap > * {
+    width: 50%;
+    text-align: left;
+  }
+}
+/* line 37, ../sass/sass/blocks/_banner.scss */
+section.banner .black .wrap h1 {
+  color: #2F2F2F;
+  text-transform: initial;
+  line-height: 1.1em;
+}
+@media only screen and (min-width: 780px) {
+  /* line 37, ../sass/sass/blocks/_banner.scss */
+  section.banner .black .wrap h1 {
+    font-size: 4.9375rem;
+    font-weight: 700;
+    margin-top: 1em;
+  }
+}
+/* line 47, ../sass/sass/blocks/_banner.scss */
+section.banner .black .wrap .btn {
+  background-image: linear-gradient(244deg, #A8D52A, #24793b);
+  color: #FFFFFF;
+  border-radius: 14px;
+  font-size: 1.35em;
+  margin-top: 1em;
+  display: inline-block;
+  padding: .5em 1.25em;
+}
+@media only screen and (min-width: 780px) {
+  /* line 47, ../sass/sass/blocks/_banner.scss */
+  section.banner .black .wrap .btn {
+    padding: 1em 4em;
+  }
+}
+/* line 61, ../sass/sass/blocks/_banner.scss */
+section.banner .polygon {
+  display: none;
+  position: absolute;
+  bottom: -50px;
+  right: 5%;
+}
+@media only screen and (min-width: 1366px) {
+  /* line 61, ../sass/sass/blocks/_banner.scss */
+  section.banner .polygon {
+    bottom: -100px;
+  }
+}
+/* line 69, ../sass/sass/blocks/_banner.scss */
+section.banner .polygon img {
+  max-height: 225px;
+  width: auto;
+}
+@media only screen and (min-width: 1030px) {
+  /* line 69, ../sass/sass/blocks/_banner.scss */
+  section.banner .polygon img {
+    max-height: 250px;
+  }
+}
+@media only screen and (min-width: 1366px) {
+  /* line 69, ../sass/sass/blocks/_banner.scss */
+  section.banner .polygon img {
+    max-height: 350px;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  /* line 69, ../sass/sass/blocks/_banner.scss */
+  section.banner .polygon img {
+    max-height: 450px;
+  }
+}
+/* line 87, ../sass/sass/blocks/_banner.scss */
+section.banner.poly:after {
+  position: absolute;
+  bottom: -2px;
+  right: 0;
+  z-index: -1;
+  width: 100%;
+  text-align: right;
+  background: url("../images/polygon.png") center/cover;
+  max-height: 796px;
+  height: 100%;
+  display: block;
+  content: "";
+}
+@media only screen and (min-width: 980px) {
+  /* line 102, ../sass/sass/blocks/_banner.scss */
+  section.banner .polygon {
+    display: block;
+  }
+}
+/* line 2, ../sass/sass/blocks/_validation.scss */
+section.validation h2 {
+  background-image: linear-gradient(#A8D52A, #24793b);
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 1.5em;
+  padding: .25em 0;
+  font-weight: 700;
+  margin-bottom: 0;
+  border-top: 3px solid #24793b;
 }
