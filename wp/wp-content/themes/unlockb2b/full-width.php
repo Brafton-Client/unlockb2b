@@ -18,7 +18,7 @@ $tagline = wp_kses_post(get_field('tagline'));
 			<main id="main" class="m-all t-all d-all cf" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 			<?php $sectionrow=0;
 			if ($background_image||$title||$tagline) : ?>
-				<section class="banner visual<?php if ($banner_style == 'sinistral'): echo ' sinistral'; endif; ?>"<?php if ($background_image): echo ' style="background-image:url()"'; endif; ?>>
+				<section class="banner visual poly<?php if ($banner_style == 'sinistral'): echo ' sinistral'; endif; ?>"<?php if ($background_image): echo ' style="background-image:url()"'; endif; ?>>
 					<div class="hexagon-background-image">
 						<img src="<?php echo $background_image; ?>"/>
 					</div>
@@ -30,6 +30,9 @@ $tagline = wp_kses_post(get_field('tagline'));
 						<?php if ($title): echo '<h1 class="page-title" itemprop="headline">'.$title.'</h1>'; endif; ?>
 						<?php if ($tagline): echo $tagline; endif; ?>
 					</div></div>
+					<div class="polygon">
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/lock-green.png"/>
+					</div>
 				</section>
 			<?php $sectionrow++;
 			endif; // check if the flexible content field has rows of data ?>

@@ -1,0 +1,41 @@
+footer{
+    &.footer{
+        padding-top:0;
+        .copyright{
+            background:transparent;
+        }
+        #inner-footer{
+            section{
+                @media only screen and (min-width:768px){
+                    flex: 01 25%;
+                }
+                h2{
+                  &.h3{
+                    font-size:1em;
+                    font-weight: 900;
+                  }
+                }
+                &:first-of-type{
+                    margin-right:10%;
+                    flex: 0 1 30%;
+                }
+            }
+        }
+    }
+    &:before{
+        display:block;
+        content:"";
+        width:100%;
+        height:8px;
+        background-image: linear-gradient(244deg, $lightGreen, $green);
+    }
+    a.logo{
+        img{
+            // max-width:initial;
+            @media only screen and (min-width:481px){
+                max-width:400px !important;
+            }
+        }
+    }
+
+}

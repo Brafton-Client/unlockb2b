@@ -1,0 +1,16 @@
+&.validation{
+    h2{
+        background-image: linear-gradient($lightGreen, $green);
+        color:$white;
+        text-align: center;
+        font-size:1.5em;
+        padding:.25em 0;
+        font-weight: 700;
+        margin-bottom:0;
+        border-top:3px solid $green;
+    }
+    .wrap{
+        // padding-top:0;
+       
+    }
+}

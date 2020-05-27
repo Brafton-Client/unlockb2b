@@ -1,7 +1,12 @@
 @import 'components/variables';
+@import 'components/typography';
+
+@import ' modules/body';
 
 @import 'modules/header';
+@import 'modules/footer';
 
 section{
     @import 'blocks/banner';
+    @import 'blocks/validation';
 }
