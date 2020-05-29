@@ -1,0 +1,23 @@
+&.list.video-popup{
+    .container{
+        
+        justify-content: center;
+        .list-item{
+            max-width:60%;
+            .image{
+                position: relative;
+                h3{
+                    position: absolute;
+                    top:50%;
+                    transform: translateY(-100%) translateX(-50%);
+                    left: 50%;
+                    padding:1em 2em;
+                    color:$white;
+                    border-radius:25px;
+                    background-color:rgba(0,0,0,.6);
+                    font-weight:900;
+                }
+            }
+        }
+    }
+}
