@@ -61,10 +61,23 @@ if ( $style['color'] ) { echo 'color: ' . sanitize_hex_color($style['color']) . 
 			foreach( $custom as $item ):
 				if ($item['button']){
 					$url = esc_url($item['button']['url']);
-					$text = sanitize_text_field($item['button']['text']);
+					$text = sanitize_text_field($item['button']['title']);
+				}else{
+					$url = null;
+					$text = null;
 				}
 			?>
 				<div class="list-item"><?php
+				if ( $item['title'] ):
+					echo '<div class="text">';
+					echo '<h3>';
+					 if ($url): echo '<a href="'.$url.'">'; endif;
+					 $titlestring = sanitize_text_field($item['title']);
+
+					 echo $titlestring.'</a></h3>';
+					 echo '</div>';
+				endif;
+
 				if ( !$showbutton ):'<a href="'.$url.'"">'; endif;
 					if ( $item['image'] ):
 						echo '<div class="image">';
@@ -77,21 +90,11 @@ if ( $style['color'] ) { echo 'color: ' . sanitize_hex_color($style['color']) . 
 					endif;
 				if ( !$showbutton ):'</a>'; endif;
 
-				if ( $item['title'] ):
-					echo '<div class="text">';
-					echo '<h3>';
-					 if ($url): echo '<a href="'.$url.'">'; endif;
-					 $titlestring = sanitize_text_field($item['title']);
-					 if (strlen($titlestring) > 65){
-						 $titlestring = implode(' ', array_slice(explode(' ', $titlestring), 0, 10)).'...';
-					 }
-					 echo $titlestring.'</a></h3>';
-					 echo '</div>';
-				endif;
+
 
 				if ( $item['content'] ): echo wp_kses_post($item['content']); endif;
 
-				if ( $showbutton ): echo '<a href="'.$url.'" class="button">';
+				if ( $showbutton && $url ): echo '<a href="'.$url.'" class="button">';
 					if($text): echo $text;
 					else: _e('Read More', 'braftonium');
 					endif;
@@ -214,8 +217,10 @@ if ( $style['color'] ) { echo 'color: ' . sanitize_hex_color($style['color']) . 
 						endif;
 					echo '</p></div>';
 					// simply check for $showbutton...we have a confirmed URL
-					if ( $showbutton ): echo '<a href="'.$url.'" class="blue-btn">';
-						echo __( 'Read More', 'braftonium' );
+					if ( $showbutton && $url ): echo '<a href="'.$url.'" class="blue-btn">';
+							if($text): echo $text;
+						else: _e('Read Mor', 'braftonium');
+						endif;
 						echo '</a>';
 					endif;
 				echo '</div><!-- //list-item -->';

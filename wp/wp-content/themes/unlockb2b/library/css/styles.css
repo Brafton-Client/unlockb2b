@@ -102,6 +102,30 @@ footer:before {
   }
 }
 
+/* line 2, ../sass/sass/blocks/_all.scss */
+section.center-heading h2 {
+  text-align: center;
+}
+/* line 7, ../sass/sass/blocks/_all.scss */
+section.center-title h3 {
+  text-align: center;
+}
+/* line 2, ../sass/sass/blocks/_list.scss */
+section.space-3-column .container {
+  justify-content: space-around;
+}
+/* line 4, ../sass/sass/blocks/_list.scss */
+section.space-3-column .container .list-item {
+  flex: 0 1 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+/* line 9, ../sass/sass/blocks/_list.scss */
+section.space-3-column .container .list-item > * {
+  flex: 0 1 auto;
+  margin: 0 auto;
+}
 /* line 1, ../sass/sass/blocks/_banner.scss */
 section.banner {
   position: relative;
@@ -124,7 +148,7 @@ section.banner .hexagon-background-image img {
 @media only screen and (min-width: 1030px) {
   /* line 3, ../sass/sass/blocks/_banner.scss */
   section.banner .hexagon-background-image {
-    top: -55%;
+    top: -400px;
     right: 75px;
     max-width: 700px;
   }
@@ -143,28 +167,40 @@ section.banner .black {
     min-height: 750px;
   }
 }
+/* line 30, ../sass/sass/blocks/_banner.scss */
+section.banner .black .wrap {
+  padding-top: 5em;
+}
 @media only screen and (min-width: 1030px) {
-  /* line 31, ../sass/sass/blocks/_banner.scss */
-  section.banner .black .wrap > * {
+  /* line 32, ../sass/sass/blocks/_banner.scss */
+  section.banner .black .wrap > h1 {
     width: 50%;
     text-align: left;
   }
 }
-/* line 37, ../sass/sass/blocks/_banner.scss */
+@media only screen and (min-width: 1030px) {
+  /* line 38, ../sass/sass/blocks/_banner.scss */
+  section.banner .black .wrap > p {
+    width: 70%;
+    text-align: left;
+    color: #2F2F2F;
+  }
+}
+/* line 45, ../sass/sass/blocks/_banner.scss */
 section.banner .black .wrap h1 {
   color: #2F2F2F;
   text-transform: initial;
   line-height: 1.1em;
 }
 @media only screen and (min-width: 780px) {
-  /* line 37, ../sass/sass/blocks/_banner.scss */
+  /* line 45, ../sass/sass/blocks/_banner.scss */
   section.banner .black .wrap h1 {
-    font-size: 4.9375rem;
+    font-size: 4rem;
     font-weight: 700;
     margin-top: 1em;
   }
 }
-/* line 47, ../sass/sass/blocks/_banner.scss */
+/* line 55, ../sass/sass/blocks/_banner.scss */
 section.banner .black .wrap .btn {
   background-image: linear-gradient(244deg, #A8D52A, #24793b);
   color: #FFFFFF;
@@ -174,13 +210,29 @@ section.banner .black .wrap .btn {
   display: inline-block;
   padding: .5em 1.25em;
 }
+/* line 63, ../sass/sass/blocks/_banner.scss */
+section.banner .black .wrap .btn.inverted {
+  background-image: none;
+  background-color: #FFFFFF;
+  border: 2px solid #A8D52A;
+  color: #A8D52A;
+  padding: calc(.5em - 2px) calc(1.25em - 2px);
+}
 @media only screen and (min-width: 780px) {
-  /* line 47, ../sass/sass/blocks/_banner.scss */
+  /* line 55, ../sass/sass/blocks/_banner.scss */
   section.banner .black .wrap .btn {
-    padding: 1em 4em;
+    padding: .5em 2.5em;
+  }
+  /* line 72, ../sass/sass/blocks/_banner.scss */
+  section.banner .black .wrap .btn.inverted {
+    padding: calc(.5em - 2px) calc(2.5em - 2px);
   }
 }
-/* line 61, ../sass/sass/blocks/_banner.scss */
+/* line 77, ../sass/sass/blocks/_banner.scss */
+section.banner .black .wrap a {
+  color: #A8D52A;
+}
+/* line 82, ../sass/sass/blocks/_banner.scss */
 section.banner .polygon {
   display: none;
   position: absolute;
@@ -188,35 +240,35 @@ section.banner .polygon {
   right: 5%;
 }
 @media only screen and (min-width: 1366px) {
-  /* line 61, ../sass/sass/blocks/_banner.scss */
+  /* line 82, ../sass/sass/blocks/_banner.scss */
   section.banner .polygon {
     bottom: -100px;
   }
 }
-/* line 69, ../sass/sass/blocks/_banner.scss */
+/* line 90, ../sass/sass/blocks/_banner.scss */
 section.banner .polygon img {
   max-height: 225px;
   width: auto;
 }
 @media only screen and (min-width: 1030px) {
-  /* line 69, ../sass/sass/blocks/_banner.scss */
+  /* line 90, ../sass/sass/blocks/_banner.scss */
   section.banner .polygon img {
     max-height: 250px;
   }
 }
 @media only screen and (min-width: 1366px) {
-  /* line 69, ../sass/sass/blocks/_banner.scss */
+  /* line 90, ../sass/sass/blocks/_banner.scss */
   section.banner .polygon img {
     max-height: 350px;
   }
 }
 @media only screen and (min-width: 1600px) {
-  /* line 69, ../sass/sass/blocks/_banner.scss */
+  /* line 90, ../sass/sass/blocks/_banner.scss */
   section.banner .polygon img {
     max-height: 450px;
   }
 }
-/* line 87, ../sass/sass/blocks/_banner.scss */
+/* line 108, ../sass/sass/blocks/_banner.scss */
 section.banner.poly:after {
   position: absolute;
   bottom: -2px;
@@ -231,7 +283,7 @@ section.banner.poly:after {
   content: "";
 }
 @media only screen and (min-width: 980px) {
-  /* line 102, ../sass/sass/blocks/_banner.scss */
+  /* line 123, ../sass/sass/blocks/_banner.scss */
   section.banner .polygon {
     display: block;
   }
@@ -246,4 +298,13 @@ section.validation h2 {
   font-weight: 700;
   margin-bottom: 0;
   border-top: 3px solid #24793b;
+}
+/* line 14, ../sass/sass/blocks/_validation.scss */
+section.validation .wrap .slick-track {
+  display: flex;
+  align-items: center;
+}
+/* line 18, ../sass/sass/blocks/_validation.scss */
+section.validation .wrap .slick-track .list-item h3 {
+  text-align: center;
 }
