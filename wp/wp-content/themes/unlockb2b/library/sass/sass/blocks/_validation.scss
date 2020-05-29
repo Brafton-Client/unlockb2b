@@ -11,6 +11,14 @@
     }
     .wrap{
         // padding-top:0;
-       
+       .slick-track{
+           display:flex;
+           align-items:center;
+           .list-item{
+               h3{
+                   text-align:center;
+               }
+           }
+       }
     }
 }

@@ -7,6 +7,8 @@
 @import 'modules/footer';
 
 section{
+    @import 'blocks/all';
+    @import 'blocks/list';
     @import 'blocks/banner';
     @import 'blocks/validation';
 }

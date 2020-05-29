@@ -12,3 +12,8 @@ function unlock_style_classes($styles){
     return $styles; 
 }
 add_filter('braftonium_style_classes', 'unlock_style_classes');
+function my_custom_block_1($blocks){
+	$blocks = array_merge($blocks, include __DIR__. '/library/blocks/full-width/components/video_popup/video_popup.block.php');
+	return $blocks;
+}
+add_filter('braftonium_add_layout_block', 'my_custom_block_1');
