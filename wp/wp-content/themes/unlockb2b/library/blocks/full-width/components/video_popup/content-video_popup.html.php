@@ -21,7 +21,8 @@ $show_text = get_sub_field('show_text');
 	if ($show_text && in_array('outro', $show_text)): $outro = wp_kses_post(get_sub_field('outro_text')); endif;
 
 $style = get_sub_field('style');
-$classes = array('list');
+$classes = array('list', 'video-popup');
+
 if ($style['add_class']){
 	$classes[] = sanitize_html_classes($style['add_class']);
 }
@@ -68,19 +69,15 @@ if ( $style['color'] ) { echo 'color: ' . sanitize_hex_color($style['color']) . 
 						else:
 							echo wp_get_attachment_image( intval($item['image']), $size );
 						endif;
+						echo '<h3>';
+						if ($url): echo '<a href="'.$url.'" target="'. $target.'">'; endif;
+						echo $titlestring.'</a></h3>';
 					echo '</div>';
 				endif;
 				// if ( $item['button'] ): echo '</a>'; endif;
 
 				echo '<div class="text">';
-					if ( $item['title'] ):
-						echo '<h3>';
-						if ($url): echo '<a href="'.$url.'" target="'. $target.'">'; endif;
-						if (strlen($titlestring) > 65){
-							$titlestring = implode(' ', array_slice(explode(' ', $titlestring), 0, 10)).'...';
-						}
-						echo $titlestring.'</a></h3>';
-					endif;
+
 					if ( $item['content'] ): echo wp_kses_post($item['content']); endif;
 				echo '</div>';
 				
