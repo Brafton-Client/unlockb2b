@@ -14,6 +14,40 @@ p {
   font-size: 20px;
 }
 
+/* line 2, ../sass/sass/components/_fancybox.scss */
+.text.fancybox-content {
+  background: transparent;
+}
+
+/* line 1, ../sass/sass/components/_button.scss */
+.btn {
+  background-image: linear-gradient(244deg, #A8D52A, #24793b);
+  color: #FFFFFF;
+  border-radius: 14px;
+  font-size: 1.35em;
+  margin-top: 1em;
+  display: inline-block;
+  padding: .5em 1.25em;
+}
+/* line 9, ../sass/sass/components/_button.scss */
+.btn.inverted {
+  background-image: none;
+  background-color: #FFFFFF;
+  border: 2px solid #A8D52A;
+  color: #A8D52A;
+  padding: calc(.5em - 2px) calc(1.25em - 2px);
+}
+@media only screen and (min-width: 780px) {
+  /* line 1, ../sass/sass/components/_button.scss */
+  .btn {
+    padding: .5em 2.5em;
+  }
+  /* line 18, ../sass/sass/components/_button.scss */
+  .btn.inverted {
+    padding: calc(.5em - 2px) calc(2.5em - 2px);
+  }
+}
+
 /* line 1, ../sass/sass/modules/_body.scss */
 #container {
   overflow: hidden;
@@ -125,6 +159,120 @@ section.space-3-column .container .list-item {
 section.space-3-column .container .list-item > * {
   flex: 0 1 auto;
   margin: 0 auto;
+}
+/* line 18, ../sass/sass/blocks/_list.scss */
+section.steps .container {
+  display: block;
+}
+/* line 21, ../sass/sass/blocks/_list.scss */
+section.steps .container .list-item .image {
+  max-width: 50%;
+}
+@media only screen and (min-width: 480px) {
+  /* line 20, ../sass/sass/blocks/_list.scss */
+  section.steps .container .list-item {
+    flex-direction: row;
+  }
+  /* line 26, ../sass/sass/blocks/_list.scss */
+  section.steps .container .list-item .image {
+    flex: 0 1 20%;
+    max-width: initial;
+  }
+  /* line 30, ../sass/sass/blocks/_list.scss */
+  section.steps .container .list-item .text {
+    padding: 0 2em;
+    flex: 0 1 80%;
+  }
+  /* line 33, ../sass/sass/blocks/_list.scss */
+  section.steps .container .list-item .text h3 {
+    color: #7CB742;
+    font-weight: 900;
+  }
+}
+@media only screen and (min-width: 780px) {
+  /* line 17, ../sass/sass/blocks/_list.scss */
+  section.steps {
+    padding: 3em 0;
+  }
+  /* line 45, ../sass/sass/blocks/_list.scss */
+  section.steps .container {
+    justify-content: flex-start;
+    display: flex;
+  }
+  /* line 48, ../sass/sass/blocks/_list.scss */
+  section.steps .container .list-item {
+    background-color: #FFFFFF;
+    position: relative;
+    box-shadow: 0 24px 64px 0 rgba(22, 27, 45, 0.05);
+  }
+  /* line 52, ../sass/sass/blocks/_list.scss */
+  section.steps .container .list-item:after {
+    position: absolute;
+    background-image: url(../images/sprite.png);
+    background-position: -246px 0;
+    width: 42px;
+    height: 36px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: unset;
+    right: -57px;
+    content: "";
+    display: block;
+  }
+  /* line 65, ../sass/sass/blocks/_list.scss */
+  section.steps .container .list-item .image {
+    position: absolute;
+    margin: 0 auto;
+    top: -30%;
+  }
+  /* line 69, ../sass/sass/blocks/_list.scss */
+  section.steps .container .list-item .image img {
+    max-width: 85%;
+    height: auto;
+  }
+  /* line 74, ../sass/sass/blocks/_list.scss */
+  section.steps .container .list-item .text {
+    padding: 0 1em;
+    margin-top: 60%;
+  }
+  /* line 77, ../sass/sass/blocks/_list.scss */
+  section.steps .container .list-item .text h3 {
+    color: #7CB742;
+    font-weight: 900;
+  }
+  /* line 84, ../sass/sass/blocks/_list.scss */
+  section.steps .container.count3 .list-item {
+    margin-right: 6%;
+    flex: 0 1 28%;
+  }
+  /* line 87, ../sass/sass/blocks/_list.scss */
+  section.steps .container.count3 .list-item:nth-child(3n) {
+    margin-right: 0;
+  }
+  /* line 89, ../sass/sass/blocks/_list.scss */
+  section.steps .container.count3 .list-item:nth-child(3n):after {
+    display: none;
+  }
+  /* line 96, ../sass/sass/blocks/_list.scss */
+  section.steps .container.count4 .list-item {
+    margin-right: 6.35%;
+    flex: 0 1 20%;
+  }
+  /* line 99, ../sass/sass/blocks/_list.scss */
+  section.steps .container.count4 .list-item:nth-child(4n) {
+    margin-right: 0;
+  }
+  /* line 101, ../sass/sass/blocks/_list.scss */
+  section.steps .container.count4 .list-item:nth-child(4n):after {
+    display: none;
+  }
+}
+/* line 111, ../sass/sass/blocks/_list.scss */
+section.quotes .text {
+  margin-top: 1em;
+  background-color: #f5f7fa;
+  padding: 1em 2em;
+  border-radius: 10px;
 }
 /* line 1, ../sass/sass/blocks/_banner.scss */
 section.banner {
@@ -313,14 +461,20 @@ section.list.video-popup .container {
   justify-content: center;
 }
 /* line 5, ../sass/sass/blocks/_video_popup.scss */
-section.list.video-popup .container .list-item {
-  max-width: 60%;
+section.list.video-popup .container + p {
+  font-size: 2em;
 }
-/* line 7, ../sass/sass/blocks/_video_popup.scss */
+@media only screen and (min-width: 980px) {
+  /* line 8, ../sass/sass/blocks/_video_popup.scss */
+  section.list.video-popup .container .list-item {
+    max-width: 60%;
+  }
+}
+/* line 12, ../sass/sass/blocks/_video_popup.scss */
 section.list.video-popup .container .list-item .image {
   position: relative;
 }
-/* line 9, ../sass/sass/blocks/_video_popup.scss */
+/* line 14, ../sass/sass/blocks/_video_popup.scss */
 section.list.video-popup .container .list-item .image h3 {
   position: absolute;
   top: 50%;
@@ -331,4 +485,17 @@ section.list.video-popup .container .list-item .image h3 {
   border-radius: 25px;
   background-color: rgba(0, 0, 0, 0.6);
   font-weight: 900;
+  cursor: pointer;
+}
+/* line 25, ../sass/sass/blocks/_video_popup.scss */
+section.list.video-popup .container .list-item .image h3 i {
+  color: #7CB742;
+  font-size: 2em;
+  position: absolute;
+  left: .5em;
+  top: 20px;
+}
+/* line 35, ../sass/sass/blocks/_video_popup.scss */
+section.list.video-popup .container .list-item .text.fancybox-content {
+  background: transparent;
 }

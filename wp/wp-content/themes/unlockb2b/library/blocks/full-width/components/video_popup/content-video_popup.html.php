@@ -52,6 +52,7 @@ if ( $style['color'] ) { echo 'color: ' . sanitize_hex_color($style['color']) . 
 		if ($intro): echo $intro; endif;
 			$count = count($custom);
 			echo '<div class="container count'.$count.'">';
+			$pop = 0;
 			foreach( $custom as $item ):
 				// if($item['button']):
 				// 	$url = esc_url($item['button']['url']);
@@ -69,16 +70,16 @@ if ( $style['color'] ) { echo 'color: ' . sanitize_hex_color($style['color']) . 
 						else:
 							echo wp_get_attachment_image( intval($item['image']), $size );
 						endif;
-						echo '<h3>';
-						if ($url): echo '<a href="'.$url.'" target="'. $target.'">'; endif;
-						echo $titlestring.'</a></h3>';
+						echo '<h3 data-fancybox data-src="#popup-'.$sectionrow.'-'.$pop.'" href="javascript:;"><i class="fas fa-caret-right"></i>';
+			
+						echo $titlestring.'</h3>';
 					echo '</div>';
 				endif;
 				// if ( $item['button'] ): echo '</a>'; endif;
 
-				echo '<div class="text">';
+				echo '<div style="display:none;" class="text" id="popup-'.$sectionrow.'-'.$pop.'">';
 
-					if ( $item['content'] ): echo wp_kses_post($item['content']); endif;
+					if ( $item['content'] ): echo $item['content']; endif;
 				echo '</div>';
 				
 				// if ( $showbutton && $url ): echo '<a href="'.$url.'" class="blue-btn" target="'. $target.'">';
@@ -89,6 +90,7 @@ if ( $style['color'] ) { echo 'color: ' . sanitize_hex_color($style['color']) . 
 				// endif;
 
 				echo '</div>';
+				$pop++;
 			endforeach;
 			
 

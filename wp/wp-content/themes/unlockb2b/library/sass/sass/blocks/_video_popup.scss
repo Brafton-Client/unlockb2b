@@ -2,8 +2,13 @@
     .container{
         
         justify-content: center;
+        + p{
+            font-size:2em;
+        }
         .list-item{
+            @media only screen and (min-width:980px){
             max-width:60%;
+            }
             .image{
                 position: relative;
                 h3{
@@ -16,8 +21,22 @@
                     border-radius:25px;
                     background-color:rgba(0,0,0,.6);
                     font-weight:900;
+                    cursor:pointer;
+                    i{
+                        color:$midGreen;
+                        font-size: 2em;
+                        position: absolute;
+                        left: .5em;
+                        top: 20px;
+                    }
                 }
             }
+            .text{
+                &.fancybox-content{
+                    background:transparent;
+                }
+            }
+
         }
     }
 }

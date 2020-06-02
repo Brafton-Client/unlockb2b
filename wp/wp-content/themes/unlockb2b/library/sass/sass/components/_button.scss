@@ -1,0 +1,22 @@
+.btn{
+    background-image: linear-gradient(244deg, $lightGreen, $green);
+    color:$white;
+    border-radius: 14px;
+    font-size: 1.35em;
+    margin-top:1em;
+    display:inline-block;
+    padding:.5em 1.25em;
+    &.inverted{
+        background-image:none;
+        background-color:$white;
+        border:2px solid $lightGreen;
+        color:$lightGreen;
+        padding:calc(.5em - 2px) calc(1.25em - 2px);
+    }
+    @media only screen and (min-width:780px){
+        padding: .5em 2.5em;
+        &.inverted{
+            padding:calc(.5em - 2px) calc(2.5em - 2px);
+        }
+    }
+}
