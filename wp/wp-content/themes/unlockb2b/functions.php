@@ -4,7 +4,9 @@ add_action( 'wp_enqueue_scripts', 'child_enqueue_styles', 1000);
 function child_enqueue_styles() {
 	wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/library/css/styles.css');
 	wp_enqueue_style( 'fontawesome', 'https://use.fontawesome.com/releases/v5.9.0/css/all.css');
+	wp_enqueue_style( 'fancybox', 'https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css');
 
+	wp_enqueue_script( 'fancybox', 'https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js', array('jquery'));
 	// wp_enqueue_script( 'excetras-main', get_stylesheet_directory_uri(). '/library/js/exectras.js', array('jquery'));
 }
 function unlock_style_classes($styles){
