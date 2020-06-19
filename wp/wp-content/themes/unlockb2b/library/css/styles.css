@@ -10,6 +10,12 @@ h2 {
 }
 
 /* line 8, ../sass/sass/components/_typography.scss */
+h3 {
+  margin-bottom: 0;
+  padding-bottom: 1em;
+}
+
+/* line 12, ../sass/sass/components/_typography.scss */
 p {
   font-size: 20px;
 }
@@ -20,7 +26,7 @@ p {
 }
 
 /* line 1, ../sass/sass/components/_button.scss */
-.btn {
+.btn, .blue-btn {
   background-image: linear-gradient(244deg, #A8D52A, #24793b);
   color: #FFFFFF;
   border-radius: 14px;
@@ -30,7 +36,7 @@ p {
   padding: .5em 1.25em;
 }
 /* line 9, ../sass/sass/components/_button.scss */
-.btn.inverted {
+.btn.inverted, .blue-btn.inverted {
   background-image: none;
   background-color: #FFFFFF;
   border: 2px solid #A8D52A;
@@ -39,13 +45,66 @@ p {
 }
 @media only screen and (min-width: 780px) {
   /* line 1, ../sass/sass/components/_button.scss */
-  .btn {
+  .btn, .blue-btn {
     padding: .5em 2.5em;
   }
   /* line 18, ../sass/sass/components/_button.scss */
-  .btn.inverted {
+  .btn.inverted, .blue-btn.inverted {
     padding: calc(.5em - 2px) calc(2.5em - 2px);
   }
+}
+
+/* line 6, ../sass/sass/components/_zohoform.scss */
+#crmWebToEntityForm .apply-now {
+  display: inline-block;
+  background: #A9C863;
+  color: #FFF;
+  padding: 1em 2em;
+  border-radius: 7px;
+  font-size: 1em;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* line 2, ../sass/sass/components/_lists.scss */
+ul.check-list {
+  margin-left: 2.5em;
+}
+/* line 4, ../sass/sass/components/_lists.scss */
+ul.check-list li {
+  list-style: none;
+  position: relative;
+  font-size: 1.2em;
+  margin: 1em 0;
+}
+/* line 9, ../sass/sass/components/_lists.scss */
+ul.check-list li:before {
+  content: '';
+  display: block;
+  position: relative;
+  border-radius: 100%;
+  transform: none;
+  background-image: url(../images/round-green-arrow.png);
+  top: 5px;
+  left: -55px;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  background-size: contain;
+}
+/* line 25, ../sass/sass/components/_lists.scss */
+ul.column-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+/* line 30, ../sass/sass/components/_lists.scss */
+ul.column-list li {
+  font-size: 1.25em;
+  list-style-type: disc;
+  flex: 0 0 42.5%;
+  margin-bottom: 0.5em;
 }
 
 /* line 1, ../sass/sass/modules/_body.scss */
@@ -143,6 +202,27 @@ section.center-heading h2 {
 /* line 7, ../sass/sass/blocks/_all.scss */
 section.center-title h3 {
   text-align: center;
+}
+/* line 12, ../sass/sass/blocks/_all.scss */
+section.remove-top-padding .wrap {
+  padding-top: 0;
+}
+/* line 17, ../sass/sass/blocks/_all.scss */
+section.remove-bottom-padding .wrap {
+  padding-bottom: 0;
+}
+/* line 22, ../sass/sass/blocks/_all.scss */
+section.remove-padding .wrap {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+/* line 30, ../sass/sass/blocks/_all.scss */
+section.align-top .wrap .container > * {
+  margin: 0;
+}
+/* line 36, ../sass/sass/blocks/_all.scss */
+section.increase-top-margin {
+  margin-top: 2em;
 }
 /* line 2, ../sass/sass/blocks/_list.scss */
 section.space-3-column .container {
@@ -498,4 +578,12 @@ section.list.video-popup .container .list-item .image h3 i {
 /* line 35, ../sass/sass/blocks/_video_popup.scss */
 section.list.video-popup .container .list-item .text.fancybox-content {
   background: transparent;
+}
+/* line 2, ../sass/sass/blocks/_cta.scss */
+section.cta .container {
+  display: block !important;
+}
+/* line 5, ../sass/sass/blocks/_cta.scss */
+section.cta h2 {
+  font-size: 2em;
 }
