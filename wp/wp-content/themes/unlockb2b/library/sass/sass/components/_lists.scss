@@ -1,0 +1,40 @@
+ul{
+    &.check-list{
+        margin-left:2.5em;
+        li{
+            list-style: none;
+            position: relative;
+            font-size:1.2em;
+            margin:1em 0;
+            &:before{
+                content: '';
+                display: block;
+                position: relative;
+                border-radius: 100%;
+                transform: none;
+                background-image: url(../images/round-green-arrow.png);
+                top: 5px;
+                left: -55px;
+                width: 40px;
+                height: 40px;
+                position: absolute;
+                background-size: contain;
+            }
+        }
+    }
+    &.column-list{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        li{
+            font-size: 1.25em;
+            list-style-type: disc;
+            flex: 0 0 42.5%;
+            margin-bottom: 0.5em;
+        }
+    }
+}
+ol{
+
+}

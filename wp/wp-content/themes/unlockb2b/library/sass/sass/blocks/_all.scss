@@ -8,3 +8,31 @@
         text-align:center;
     }
 }
+&.remove-top-padding{
+    .wrap{
+        padding-top:0;
+    }
+}
+&.remove-bottom-padding{
+    .wrap{
+        padding-bottom:0;
+    }
+}
+&.remove-padding{
+    .wrap{
+        padding-top:0;
+        padding-bottom:0;
+    }
+}
+&.align-top{
+    .wrap{
+        .container{
+            > * {
+                margin:0;
+            }
+        }
+    }
+}
+&.increase-top-margin{
+    margin-top:2em;
+}
