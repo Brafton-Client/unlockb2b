@@ -1,0 +1,87 @@
+.blog{
+    #sidebar1{
+        #categories-2{
+            background-color: white;
+            border-radius: 10px;
+            padding: 1em 3em;
+            &:after{
+                content:'';
+                display:block;
+                clear:both;
+            }
+            h2{
+                display:inline-block;
+                float:left;
+                color:$midGreen;
+            }
+            ul{
+                display:flex;
+                float:left;
+                list-style: none;
+                margin-bottom:0;
+                li{
+                    margin-right:2em;
+                    text-transform: capitalize;
+                    font-size:1.25em;
+                    a{
+                        color:$text;
+                        &:hover, &:visited{
+                            color:$text;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    main{
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-align-content: stretch;
+        -ms-flex-line-pack: stretch;
+        align-content: stretch;
+        -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+        &:before, &:after{
+            display:none;
+        }
+        article{
+            flex:0 1 30%;
+            background-color:white;
+            border-radius:10px;
+            margin-top:0 !important;
+            padding:1em !important;
+            min-height: 525px;
+            &.empty{
+                background-color:transparent;
+            }
+            @media only screen and (min-width:1030px){
+                display:block;
+            }
+            .thumbnail{
+                height:175px;
+                overflow: hidden;
+                margin-right:0;
+                img{
+                    height:100%;
+                    width:100%;
+                }
+            }
+            .entry-content{
+                p{
+                    font-size:16px;
+                }
+            }
+        }
+    }
+}

@@ -36,10 +36,11 @@
                 }
             }
             > p{
+                color:$text;
                 @media only screen and (min-width:1030px){
                     width:70%;
                     text-align: left;
-                    color:$text;
+                    
                 }
             }
             h1{
@@ -56,10 +57,13 @@
                 background-image: linear-gradient(244deg, $lightGreen, $green);
                 color:$white;
                 border-radius: 14px;
-                font-size: 1.35em;
+                font-size:1em;
                 margin-top:1em;
                 display:inline-block;
                 padding:.5em 1.25em;
+                @media only screen and (min-width:780px){
+                    font-size: 1.35em;
+                }
                 &.inverted{
                     background-image:none;
                     background-color:$white;
