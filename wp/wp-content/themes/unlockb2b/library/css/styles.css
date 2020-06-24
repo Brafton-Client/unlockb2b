@@ -32,7 +32,7 @@ p {
 }
 
 /* line 1, ../sass/sass/components/_button.scss */
-.btn, .blue-btn {
+.btn, .blue-btn, .button {
   background-image: linear-gradient(244deg, #A8D52A, #24793b);
   color: #FFFFFF;
   border-radius: 14px;
@@ -42,7 +42,7 @@ p {
   padding: .5em 1.25em;
 }
 /* line 9, ../sass/sass/components/_button.scss */
-.btn.inverted, .blue-btn.inverted {
+.btn.inverted, .blue-btn.inverted, .button.inverted {
   background-image: none;
   background-color: #FFFFFF;
   border: 2px solid #A8D52A;
@@ -51,13 +51,18 @@ p {
 }
 @media only screen and (min-width: 780px) {
   /* line 1, ../sass/sass/components/_button.scss */
-  .btn, .blue-btn {
+  .btn, .blue-btn, .button {
     padding: .5em 2.5em;
   }
   /* line 18, ../sass/sass/components/_button.scss */
-  .btn.inverted, .blue-btn.inverted {
+  .btn.inverted, .blue-btn.inverted, .button.inverted {
     padding: calc(.5em - 2px) calc(2.5em - 2px);
   }
+}
+
+/* line 23, ../sass/sass/components/_button.scss */
+.button {
+  font-size: 1em;
 }
 
 /* line 1, ../sass/sass/components/_zohoform.scss */
@@ -182,42 +187,58 @@ header #inner-header #logo svg {
 .blog #sidebar1 #categories-2 {
   background-color: white;
   border-radius: 10px;
-  padding: 1em 3em;
+  padding: 1em;
 }
-/* line 7, ../sass/sass/modules/_blog.scss */
+@media only screen and (min-width: 780px) {
+  /* line 3, ../sass/sass/modules/_blog.scss */
+  .blog #sidebar1 #categories-2 {
+    padding: 1em 3em;
+  }
+}
+/* line 10, ../sass/sass/modules/_blog.scss */
 .blog #sidebar1 #categories-2:after {
   content: '';
   display: block;
   clear: both;
 }
-/* line 12, ../sass/sass/modules/_blog.scss */
+/* line 15, ../sass/sass/modules/_blog.scss */
 .blog #sidebar1 #categories-2 h2 {
   display: inline-block;
   float: left;
   color: #7CB742;
 }
-/* line 17, ../sass/sass/modules/_blog.scss */
+/* line 20, ../sass/sass/modules/_blog.scss */
 .blog #sidebar1 #categories-2 ul {
-  display: flex;
   float: left;
   list-style: none;
   margin-bottom: 0;
 }
-/* line 22, ../sass/sass/modules/_blog.scss */
+@media only screen and (min-width: 780px) {
+  /* line 20, ../sass/sass/modules/_blog.scss */
+  .blog #sidebar1 #categories-2 ul {
+    display: flex;
+  }
+}
+/* line 28, ../sass/sass/modules/_blog.scss */
 .blog #sidebar1 #categories-2 ul li {
-  margin-right: 2em;
   text-transform: capitalize;
   font-size: 1.25em;
 }
-/* line 26, ../sass/sass/modules/_blog.scss */
+@media only screen and (min-width: 780px) {
+  /* line 28, ../sass/sass/modules/_blog.scss */
+  .blog #sidebar1 #categories-2 ul li {
+    margin-right: 2em;
+  }
+}
+/* line 34, ../sass/sass/modules/_blog.scss */
 .blog #sidebar1 #categories-2 ul li a {
   color: #2F2F2F;
 }
-/* line 28, ../sass/sass/modules/_blog.scss */
+/* line 36, ../sass/sass/modules/_blog.scss */
 .blog #sidebar1 #categories-2 ul li a:hover, .blog #sidebar1 #categories-2 ul li a:visited {
   color: #2F2F2F;
 }
-/* line 36, ../sass/sass/modules/_blog.scss */
+/* line 44, ../sass/sass/modules/_blog.scss */
 .blog main {
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -238,43 +259,87 @@ header #inner-header #logo svg {
   -ms-flex-align: start;
   align-items: flex-start;
 }
-/* line 55, ../sass/sass/modules/_blog.scss */
+/* line 63, ../sass/sass/modules/_blog.scss */
 .blog main:before, .blog main:after {
   display: none;
 }
-/* line 58, ../sass/sass/modules/_blog.scss */
+/* line 66, ../sass/sass/modules/_blog.scss */
 .blog main article {
-  flex: 0 1 30%;
   background-color: white;
   border-radius: 10px;
   margin-top: 0 !important;
   padding: 1em !important;
   min-height: 525px;
 }
-/* line 65, ../sass/sass/modules/_blog.scss */
+@media only screen and (min-width: 780px) {
+  /* line 66, ../sass/sass/modules/_blog.scss */
+  .blog main article {
+    flex: 0 1 30%;
+  }
+}
+/* line 75, ../sass/sass/modules/_blog.scss */
 .blog main article.empty {
   background-color: transparent;
 }
 @media only screen and (min-width: 1030px) {
-  /* line 58, ../sass/sass/modules/_blog.scss */
+  /* line 66, ../sass/sass/modules/_blog.scss */
   .blog main article {
     display: block;
   }
 }
-/* line 71, ../sass/sass/modules/_blog.scss */
+/* line 81, ../sass/sass/modules/_blog.scss */
 .blog main article .thumbnail {
   height: 175px;
   overflow: hidden;
   margin-right: 0;
 }
-/* line 75, ../sass/sass/modules/_blog.scss */
+/* line 85, ../sass/sass/modules/_blog.scss */
 .blog main article .thumbnail img {
   height: 100%;
   width: 100%;
 }
-/* line 81, ../sass/sass/modules/_blog.scss */
+/* line 91, ../sass/sass/modules/_blog.scss */
 .blog main article .entry-content p {
   font-size: 16px;
+}
+
+/* line 100, ../sass/sass/modules/_blog.scss */
+.single .banner {
+  margin-top: 1.5em;
+}
+/* line 102, ../sass/sass/modules/_blog.scss */
+.single .banner .black {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+/* line 105, ../sass/sass/modules/_blog.scss */
+.single .banner .black .wrap h1, .single .banner .black .wrap p {
+  color: #FFFFFF;
+}
+@media only screen and (min-width: 1030px) {
+  /* line 102, ../sass/sass/modules/_blog.scss */
+  .single .banner .black {
+    min-height: auto;
+  }
+}
+/* line 117, ../sass/sass/modules/_blog.scss */
+.single #sidebar1 .latest.widget h3 {
+  font-weight: 900;
+}
+/* line 120, ../sass/sass/modules/_blog.scss */
+.single #sidebar1 .latest.widget h4, .single #sidebar1 .latest.widget h3 {
+  color: #7CB742;
+}
+/* line 122, ../sass/sass/modules/_blog.scss */
+.single #sidebar1 .latest.widget h4 a, .single #sidebar1 .latest.widget h3 a {
+  color: #7CB742;
+}
+/* line 124, ../sass/sass/modules/_blog.scss */
+.single #sidebar1 .latest.widget h4 a:visited, .single #sidebar1 .latest.widget h4 a:hover, .single #sidebar1 .latest.widget h3 a:visited, .single #sidebar1 .latest.widget h3 a:hover {
+  color: #7CB742;
+}
+/* line 128, ../sass/sass/modules/_blog.scss */
+.single #sidebar1 .latest.widget h4 .tiny, .single #sidebar1 .latest.widget h3 .tiny {
+  display: none;
 }
 
 /* line 2, ../sass/sass/modules/_footer.scss */

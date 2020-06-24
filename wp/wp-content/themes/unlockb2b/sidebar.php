@@ -3,10 +3,13 @@
 						<?php dynamic_sidebar( 'page-sidebar' ); ?>
 					</div>
 					<?php elseif ( !is_page() && is_active_sidebar('blog-sidebar') ) : ?>
-					<div id="sidebar1" class="sidebar m-all  cf" role="complementary">
-						<?php dynamic_sidebar( 'blog-sidebar' ); ?>
+					<div id="sidebar1" class="sidebar m-all <?php if(is_single()){ echo 't-1of3 d-2of7'; } ?> cf" role="complementary">
+
+						<?php if(!is_single()){
+							dynamic_sidebar( 'blog-sidebar' ); 
+						}?>
 					
-						<?php if ( is_single() && get_field('related_posts', 'option')=='side' ) :
+						<?php if ( is_single() ) :
 							braftonium_related_posts(3);
 						endif; ?>
 					</div>

@@ -1,4 +1,4 @@
-.btn, .blue-btn{
+.btn, .blue-btn, .button{
     background-image: linear-gradient(244deg, $lightGreen, $green);
     color:$white;
     border-radius: 14px;
@@ -19,4 +19,7 @@
             padding:calc(.5em - 2px) calc(2.5em - 2px);
         }
     }
+}
+.button{
+    font-size:1em;
 }
