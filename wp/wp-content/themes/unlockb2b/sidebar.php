@@ -5,7 +5,13 @@
 					<?php elseif ( !is_page() && is_active_sidebar('blog-sidebar') ) : ?>
 					<div id="sidebar1" class="sidebar m-all <?php if(is_single()){ echo 't-1of3 d-2of7'; } ?> cf" role="complementary">
 
-						<?php if(!is_single()){
+						<?php 
+						if(!is_archive() && !is_single()){
+							echo '<h1>Blogs</h1>';
+						}elseif(is_archive()){
+							echo '<h1>Why supplier relationships are becoming even more important to your business</h1>';
+						}
+						if(!is_single()){
 							dynamic_sidebar( 'blog-sidebar' ); 
 						}?>
 					
