@@ -1,4 +1,4 @@
-.blog{
+.blog, .archive{
     #sidebar1{
         #categories-2{
             background-color: white;
@@ -86,6 +86,12 @@
                     height:100%;
                     width:100%;
                 }
+            }
+            header{
+                margin-bottom:0;
+            }
+            .byline{
+                font-size:.75em;
             }
             .entry-content{
                 p{
