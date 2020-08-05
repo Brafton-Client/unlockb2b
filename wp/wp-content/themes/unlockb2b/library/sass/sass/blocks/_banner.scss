@@ -116,7 +116,8 @@
             z-index: -1;
             width: 100%;
             text-align: right;
-            background:url('../images/polygon.png') center/cover;
+            background-image:url('../images/polygon.png');
+            background-position: center;
             max-height:796px;
             height:100%;
             display:block;
