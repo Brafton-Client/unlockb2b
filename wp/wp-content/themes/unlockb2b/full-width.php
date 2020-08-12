@@ -17,10 +17,16 @@ $tagline = wp_kses_post(get_field('tagline'));
 		<div id="inner-content" class="cf">
 			<main id="main" class="m-all t-all d-all cf" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 			<?php $sectionrow=0;
-			if ($background_image||$title||$tagline) : ?>
+			if ($background_image||$title||$tagline) :
+			$background_image_id = attachment_url_to_postid($background_image);
+			$background_image_alt = "";
+			if($background_image_id){
+				$background_image_alt = get_post_meta($background_image_id, '_wp_attachment_image_alt', true);
+			}
+			?>
 				<section class="banner visual poly<?php if ($banner_style == 'sinistral'): echo ' sinistral'; endif; ?>"<?php if ($background_image): echo ' style="background-image:url()"'; endif; ?>>
 					<div class="hexagon-background-image">
-						<img src="<?php echo $background_image; ?>"/>
+						<img src="<?php echo $background_image; ?>" alt="<?php echo $background_image_alt; ?>"/>
 					</div>
 					<?php if ($banner_style == 'sinistral'): ?>
 						<div class="wrap"><div class="black">
@@ -31,7 +37,7 @@ $tagline = wp_kses_post(get_field('tagline'));
 						<?php if ($tagline): echo $tagline; endif; ?>
 					</div></div>
 					<div class="polygon">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/lock-green.png"/>
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/lock-green.png" alt="Neon green keyhole symbol outlined"/>
 					</div>
 				</section>
 			<?php $sectionrow++;
